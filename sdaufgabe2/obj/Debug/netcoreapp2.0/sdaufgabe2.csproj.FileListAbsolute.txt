@@ -1,0 +1,10 @@
+C:\Users\Lucas\sdaufgabe2\bin\Debug\netcoreapp2.0\sdaufgabe2.deps.json
+C:\Users\Lucas\sdaufgabe2\bin\Debug\netcoreapp2.0\sdaufgabe2.runtimeconfig.json
+C:\Users\Lucas\sdaufgabe2\bin\Debug\netcoreapp2.0\sdaufgabe2.runtimeconfig.dev.json
+C:\Users\Lucas\sdaufgabe2\bin\Debug\netcoreapp2.0\sdaufgabe2.dll
+C:\Users\Lucas\sdaufgabe2\bin\Debug\netcoreapp2.0\sdaufgabe2.pdb
+C:\Users\Lucas\sdaufgabe2\obj\Debug\netcoreapp2.0\sdaufgabe2.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\sdaufgabe2\obj\Debug\netcoreapp2.0\sdaufgabe2.AssemblyInfoInputs.cache
+C:\Users\Lucas\sdaufgabe2\obj\Debug\netcoreapp2.0\sdaufgabe2.AssemblyInfo.cs
+C:\Users\Lucas\sdaufgabe2\obj\Debug\netcoreapp2.0\sdaufgabe2.dll
+C:\Users\Lucas\sdaufgabe2\obj\Debug\netcoreapp2.0\sdaufgabe2.pdb
