@@ -6,19 +6,19 @@ namespace Aufgabe1._1
     {
         static void Main(string[] args)
         {
-            var b = args[1];
-            double d = Convert.ToDouble(b);
+            var valuestring = args[1];
+            double valuedouble = Convert.ToDouble(valuestring);
 
             switch (args[0])
             {
                 case "c":
-                    getCubeInfo(d);
+                    getCubeInfo(valuedouble);
                     break;
                 case "k":
-                    getSphereInfo(d);
+                    getSphereInfo(valuedouble);
                     break;
                 case "o":
-                    getOctahedronInfo(d);
+                    getOctahedronInfo(valuedouble);
                     break;
 
                 default:
