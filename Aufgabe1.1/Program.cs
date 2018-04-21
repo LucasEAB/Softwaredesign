@@ -28,57 +28,45 @@ namespace Aufgabe1._1
         }
 
         //Cube
-        public static double getCubeSurface(double Durchmesser)
+        public static double getCubeSurface(double edgelength)
         {
-            double d = Durchmesser;
-            double A = Math.Round(6 * (d * d), 2);
-            return A;
+            return Math.Round(6 * (edgelength * edgelength), 2);
         }
-        public static double getCubeVolume(double Durchmesser)
+        public static double getCubeVolume(double edgelength)
         {
-            double d = Durchmesser;
-            double V = Math.Round(d * d * d, 2);
-            return V;
+            return Math.Round(edgelength * edgelength * edgelength, 2);
         }
-        public static void getCubeInfo(double Durchmesser)
+        public static void getCubeInfo(double edgelength)
         {
-            Console.WriteLine("Würfel:  A = " + getCubeSurface(Durchmesser) + "  |  V = " + getCubeVolume(Durchmesser));
+            Console.WriteLine("Würfel:  A = " + getCubeSurface(edgelength) + "  |  V = " + getCubeVolume(edgelength));
         }
 
         //Kugel 
-        public static double getSphereSurface(double Durchmesser)
+        public static double getSphereSurface(double diameter)
         {
-            double d = Durchmesser;
-            double A = Math.Round(Math.PI * (d * d), 2);
-            return A;
+            return Math.Round(Math.PI * (diameter * diameter), 2);
         }
-        public static double getSphereVolume(double Durchmesser)
+        public static double getSphereVolume(double diameter)
         {
-            double d = Durchmesser;
-            double V = Math.Round((Math.PI * (d * d * d)) / 6,2);
-            return V;
+            return Math.Round((Math.PI * (diameter * diameter * diameter)) / 6, 2);
         }
-        public static void getSphereInfo(double Durchmesser)
+        public static void getSphereInfo(double diameter)
         {
-            Console.WriteLine("Kugel:  A = " + getSphereSurface(Durchmesser) + "  |  V = " + getSphereVolume(Durchmesser));
+            Console.WriteLine("Kugel:  A = " + getSphereSurface(diameter) + "  |  V = " + getSphereVolume(diameter));
         }
 
         //Oktaeder
-        public static double getOctahedronSurface(double Durchmesser)
+        public static double getOctahedronSurface(double diameter)
         {
-            double d = Durchmesser;
-            double A = Math.Round(2 * Math.Sqrt(3) * (d * d), 2);
-            return A;
+            return Math.Round(2 * Math.Sqrt(3) * (diameter * diameter), 2);
         }
-        public static double getOctahedronVolume(double Durchmesser)
+        public static double getOctahedronVolume(double diameter)
         {
-            double d = Durchmesser;
-            double V = Math.Round(Math.Sqrt(2) * (d * d * d) / 3, 2);
-            return V;
+            return Math.Round(Math.Sqrt(2) * (diameter * diameter * diameter) / 3, 2);
         }
-        public static void getOctahedronInfo(double Durchmesser)
+        public static void getOctahedronInfo(double diameter)
         {
-            Console.WriteLine("Oktaeder:  A = " + getOctahedronSurface(Durchmesser) + "  |  V = " + getOctahedronVolume(Durchmesser));
+            Console.WriteLine("Oktaeder:  A = " + getOctahedronSurface(diameter) + "  |  V = " + getOctahedronVolume(diameter));
         }
     }
 }
