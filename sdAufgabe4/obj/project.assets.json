@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucas\\sdAufgabe4\\sdAufgabe4.csproj",
+      "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\Dokumente\\GitHub\\Softwaredesign\\sdAufgabe4\\sdAufgabe4.csproj",
       "projectName": "sdAufgabe4",
-      "projectPath": "C:\\Users\\lucas\\sdAufgabe4\\sdAufgabe4.csproj",
+      "projectPath": "C:\\Users\\lucas\\OneDrive\\Dokumente\\GitHub\\Softwaredesign\\sdAufgabe4\\sdAufgabe4.csproj",
       "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucas\\sdAufgabe4\\obj\\",
+      "outputPath": "C:\\Users\\lucas\\OneDrive\\Dokumente\\GitHub\\Softwaredesign\\sdAufgabe4\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
