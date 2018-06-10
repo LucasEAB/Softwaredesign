@@ -8,13 +8,3 @@ C:\Users\lucas\sdAufgabe4\obj\Debug\netcoreapp2.0\sdAufgabe4.AssemblyInfoInputs.
 C:\Users\lucas\sdAufgabe4\obj\Debug\netcoreapp2.0\sdAufgabe4.AssemblyInfo.cs
 C:\Users\lucas\sdAufgabe4\obj\Debug\netcoreapp2.0\sdAufgabe4.dll
 C:\Users\lucas\sdAufgabe4\obj\Debug\netcoreapp2.0\sdAufgabe4.pdb
-C:\Users\lucas\OneDrive\Dokumente\GitHub\Softwaredesign\sdAufgabe4\bin\Debug\netcoreapp2.0\sdAufgabe4.deps.json
-C:\Users\lucas\OneDrive\Dokumente\GitHub\Softwaredesign\sdAufgabe4\bin\Debug\netcoreapp2.0\sdAufgabe4.runtimeconfig.json
-C:\Users\lucas\OneDrive\Dokumente\GitHub\Softwaredesign\sdAufgabe4\bin\Debug\netcoreapp2.0\sdAufgabe4.runtimeconfig.dev.json
-C:\Users\lucas\OneDrive\Dokumente\GitHub\Softwaredesign\sdAufgabe4\bin\Debug\netcoreapp2.0\sdAufgabe4.dll
-C:\Users\lucas\OneDrive\Dokumente\GitHub\Softwaredesign\sdAufgabe4\bin\Debug\netcoreapp2.0\sdAufgabe4.pdb
-C:\Users\lucas\OneDrive\Dokumente\GitHub\Softwaredesign\sdAufgabe4\obj\Debug\netcoreapp2.0\sdAufgabe4.csproj.CoreCompileInputs.cache
-C:\Users\lucas\OneDrive\Dokumente\GitHub\Softwaredesign\sdAufgabe4\obj\Debug\netcoreapp2.0\sdAufgabe4.AssemblyInfoInputs.cache
-C:\Users\lucas\OneDrive\Dokumente\GitHub\Softwaredesign\sdAufgabe4\obj\Debug\netcoreapp2.0\sdAufgabe4.AssemblyInfo.cs
-C:\Users\lucas\OneDrive\Dokumente\GitHub\Softwaredesign\sdAufgabe4\obj\Debug\netcoreapp2.0\sdAufgabe4.dll
-C:\Users\lucas\OneDrive\Dokumente\GitHub\Softwaredesign\sdAufgabe4\obj\Debug\netcoreapp2.0\sdAufgabe4.pdb
