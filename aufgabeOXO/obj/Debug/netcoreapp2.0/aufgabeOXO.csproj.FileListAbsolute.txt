@@ -1,0 +1,11 @@
+C:\Users\Lucas\aufgabeOXO\bin\Debug\netcoreapp2.0\aufgabeOXO.deps.json
+C:\Users\Lucas\aufgabeOXO\bin\Debug\netcoreapp2.0\aufgabeOXO.runtimeconfig.json
+C:\Users\Lucas\aufgabeOXO\bin\Debug\netcoreapp2.0\aufgabeOXO.runtimeconfig.dev.json
+C:\Users\Lucas\aufgabeOXO\bin\Debug\netcoreapp2.0\aufgabeOXO.dll
+C:\Users\Lucas\aufgabeOXO\bin\Debug\netcoreapp2.0\aufgabeOXO.pdb
+C:\Users\Lucas\aufgabeOXO\obj\Debug\netcoreapp2.0\aufgabeOXO.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\aufgabeOXO\obj\Debug\netcoreapp2.0\aufgabeOXO.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\aufgabeOXO\obj\Debug\netcoreapp2.0\aufgabeOXO.AssemblyInfoInputs.cache
+C:\Users\Lucas\aufgabeOXO\obj\Debug\netcoreapp2.0\aufgabeOXO.AssemblyInfo.cs
+C:\Users\Lucas\aufgabeOXO\obj\Debug\netcoreapp2.0\aufgabeOXO.dll
+C:\Users\Lucas\aufgabeOXO\obj\Debug\netcoreapp2.0\aufgabeOXO.pdb

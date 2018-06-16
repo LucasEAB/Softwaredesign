@@ -670,19 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "c:\\Users\\Lucas\\Documents\\GitHub\\Softwaredesign\\sdAufgabe4\\sdAufgabe4.csproj",
-      "projectName": "sdAufgabe4",
-      "projectPath": "c:\\Users\\Lucas\\Documents\\GitHub\\Softwaredesign\\sdAufgabe4\\sdAufgabe4.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas\\aufgabeOXO\\aufgabeOXO.csproj",
+      "projectName": "aufgabeOXO",
+      "projectPath": "C:\\Users\\Lucas\\aufgabeOXO\\aufgabeOXO.csproj",
       "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Lucas\\Documents\\GitHub\\Softwaredesign\\sdAufgabe4\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\lucas\\OneDrive\\Dokumente\\GitHub\\Softwaredesign\\sdAufgabe4\\sdAufgabe4.csproj",
-      "projectName": "sdAufgabe4",
-      "projectPath": "C:\\Users\\lucas\\OneDrive\\Dokumente\\GitHub\\Softwaredesign\\sdAufgabe4\\sdAufgabe4.csproj",
-      "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucas\\OneDrive\\Dokumente\\GitHub\\Softwaredesign\\sdAufgabe4\\obj\\",
->>>>>>> 7f4670acfe7c9f3a7654d97693ac2ac2553763c4
+      "outputPath": "C:\\Users\\Lucas\\aufgabeOXO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
