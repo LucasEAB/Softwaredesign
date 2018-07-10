@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lucas\\aufgabeOXO\\aufgabeOXO.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas\\Documents\\GitHub\\Softwaredesign\\aufgabeOXO\\aufgabeOXO.csproj",
       "projectName": "aufgabeOXO",
-      "projectPath": "C:\\Users\\Lucas\\aufgabeOXO\\aufgabeOXO.csproj",
+      "projectPath": "C:\\Users\\Lucas\\Documents\\GitHub\\Softwaredesign\\aufgabeOXO\\aufgabeOXO.csproj",
       "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucas\\aufgabeOXO\\obj\\",
+      "outputPath": "C:\\Users\\Lucas\\Documents\\GitHub\\Softwaredesign\\aufgabeOXO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
