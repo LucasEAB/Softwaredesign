@@ -1,0 +1,11 @@
+C:\Users\lucas\TextAdventure_SWD\bin\Debug\netcoreapp2.0\TextAdventure_SWD.deps.json
+C:\Users\lucas\TextAdventure_SWD\bin\Debug\netcoreapp2.0\TextAdventure_SWD.runtimeconfig.json
+C:\Users\lucas\TextAdventure_SWD\bin\Debug\netcoreapp2.0\TextAdventure_SWD.runtimeconfig.dev.json
+C:\Users\lucas\TextAdventure_SWD\bin\Debug\netcoreapp2.0\TextAdventure_SWD.dll
+C:\Users\lucas\TextAdventure_SWD\bin\Debug\netcoreapp2.0\TextAdventure_SWD.pdb
+C:\Users\lucas\TextAdventure_SWD\obj\Debug\netcoreapp2.0\TextAdventure_SWD.csprojResolveAssemblyReference.cache
+C:\Users\lucas\TextAdventure_SWD\obj\Debug\netcoreapp2.0\TextAdventure_SWD.csproj.CoreCompileInputs.cache
+C:\Users\lucas\TextAdventure_SWD\obj\Debug\netcoreapp2.0\TextAdventure_SWD.AssemblyInfoInputs.cache
+C:\Users\lucas\TextAdventure_SWD\obj\Debug\netcoreapp2.0\TextAdventure_SWD.AssemblyInfo.cs
+C:\Users\lucas\TextAdventure_SWD\obj\Debug\netcoreapp2.0\TextAdventure_SWD.dll
+C:\Users\lucas\TextAdventure_SWD\obj\Debug\netcoreapp2.0\TextAdventure_SWD.pdb
