@@ -6,144 +6,132 @@ namespace TextAdventure_SWD
 {
     public class Game
     {
-        Player player;
-        Enemy oliver;
+        Player Player;
+        Enemy Oliver;
         List<Room> Rooms = new List<Room>();
 
         public void BuildGame()
         {
-            DataTable data = GetTable();
+            DataTable _data = GetTable();
 
-            foreach (DataRow row in data.Rows)
+            foreach (DataRow _row in _data.Rows)
             {
-                string _name = row["Name"].ToString();
-                Rooms.Add(new Room() { name = _name });
+                string _name = _row["Name"].ToString();
+                Rooms.Add(new Room() { Name = _name });
             }
 
             int ir = 0;
-            foreach (DataRow row in data.Rows)
+            foreach (DataRow _row in _data.Rows)
             {
-                string direction = "";
-                string nextroom = "";
-                Room neighbour;
+                string _direction = "";
+                string _nextroom = "";
+                Room _neighbour;
 
                 for (int i = 0; i < 4; i++)
                 {
                     switch (i)
                     {
                         case 0:
-                            direction = "North";
+                            _direction = "North";
                             break;
                         case 1:
-                            direction = "East";
+                            _direction = "East";
                             break;
                         case 2:
-                            direction = "South";
+                            _direction = "South";
                             break;
                         case 3:
-                            direction = "West";
+                            _direction = "West";
                             break;
                     }
-                    nextroom = row[direction].ToString();
+                    _nextroom = _row[_direction].ToString();
 
-                    if (nextroom != "")
+                    if (_nextroom != "")
                     {
-                        neighbour = null;
+                        _neighbour = null;
                         for (int r = 0; r < Rooms.Count; r++)
                         {
-                            if (Rooms[r].name == nextroom)
+                            if (Rooms[r].Name == _nextroom)
                             {
-                                neighbour = Rooms[r];
+                                _neighbour = Rooms[r];
                             }
                         }
 
-                        switch (direction)
+                        switch (_direction)
                         {
                             case "North":
-                                Rooms[ir].north = neighbour;
+                                Rooms[ir].North = _neighbour;
                                 break;
                             case "East":
-                                Rooms[ir].east = neighbour;
+                                Rooms[ir].East = _neighbour;
                                 break;
                             case "South":
-                                Rooms[ir].south = neighbour;
+                                Rooms[ir].South = _neighbour;
                                 break;
                             case "West":
-                                Rooms[ir].west = neighbour;
+                                Rooms[ir].West = _neighbour;
                                 break;
                         }
                     }
                 }
+                string _item1 = _row["Item1"].ToString();
+                if (_item1 != "")
+                {
+                    Rooms[ir].RoomItems.Add(new Item { Name = _item1 });
+                }
+                string item2 = _row["Item2"].ToString();
+                if (item2 != "")
+                {
+                    Rooms[ir].RoomItems.Add(new Item { Name = item2 });
+                }
                 ir++;
             }
 
-            //Room Items
-            Rooms[0].RoomItems.Add(new Item { name = "chair" });
-            Rooms[0].RoomItems.Add(new Item { name = "drink" });
-            Rooms[0].RoomItems.Add(new Item { name = "menu" });
-
-            Rooms[1].RoomItems.Add(new Item { name = "toilet paper" });
-            Rooms[1].RoomItems.Add(new Item { name = "a soap" });
-            Rooms[1].RoomItems.Add(new Item { name = "a strange note" });
-
-            Rooms[2].RoomItems.Add(new Item { name = "golden statue" });
-            Rooms[2].RoomItems.Add(new Item { name = "paintings of Mai Pei" });
-            Rooms[2].RoomItems.Add(new Item { name = "sensei hair care set" });
-
-            Rooms[3].RoomItems.Add(new Item { name = "burger" });
-            Rooms[3].RoomItems.Add(new Item { name = "currywurst" });
-            Rooms[3].RoomItems.Add(new Item { name = "napkins" });
-
-            Rooms[4].RoomItems.Add(new Item { name = "piece of trash" });
-            Rooms[4].RoomItems.Add(new Item { name = "bet slip" });
-            Rooms[4].RoomItems.Add(new Item { name = "brick" });
-
-            Rooms[5].RoomItems.Add(new Item { name = "poker chips" });
-            Rooms[5].RoomItems.Add(new Item { name = "drink" });
-            Rooms[5].RoomItems.Add(new Item { name = "cards" });
-
             //player
-            player = new Player("You", Rooms[4]);
-            player.CharacterItems.Add(new Item { name = "lost bet slip" });
+            Player = new Player("You", Rooms[4]);
+            Player.CharacterItems.Add(new Item { Name = "lost bet slip" });
 
             //enemy
-            oliver = new Enemy("Oliver Kahn", Rooms[RandomRoom()]);
-            oliver.CharacterItems.Add(new Item { name = "Golden Tipico bet slip" });
-            oliver.position = Rooms[1];
+            Oliver = new Enemy("Oliver Kahn", Rooms[RandomRoom()]);
+            Oliver.CharacterItems.Add(new Item { Name = "Golden Ticket" });
         }
 
         int RandomRoom()
         {
-            Random randomNumber = new Random();
-            int random = randomNumber.Next(0, Rooms.Count);
-            return random;
+            Random _randomNumber = new Random();
+            int _random = _randomNumber.Next(0, Rooms.Count);
+            return _random;
         }
 
         int RandomMove()
         {
-            Random randomNumber = new Random();
-            int random = randomNumber.Next(0, 4);
-            return random;
+            Random _randomNumber = new Random();
+            int _random = _randomNumber.Next(0, 4);
+            return _random;
         }
 
         static DataTable GetTable()
         {
-            DataTable table = new DataTable();
+            DataTable _table = new DataTable();
 
-            table.Columns.Add("Name", typeof(string));
-            table.Columns.Add("North", typeof(string));
-            table.Columns.Add("East", typeof(string));
-            table.Columns.Add("South", typeof(string));
-            table.Columns.Add("West", typeof(string));
+            _table.Columns.Add("Name", typeof(string));
+            _table.Columns.Add("North", typeof(string));
+            _table.Columns.Add("East", typeof(string));
+            _table.Columns.Add("South", typeof(string));
+            _table.Columns.Add("West", typeof(string));
+            _table.Columns.Add("Item1", typeof(string));
+            _table.Columns.Add("Item2", typeof(string));
 
-            table.Rows.Add("the Betting Office", "the palace", "", "the sidewalk", "the toilet");
-            table.Rows.Add("the toilet", "", "the Betting Office", "", "");
-            table.Rows.Add("the palace", "", "", "the pokerroom", "");
-            table.Rows.Add("the Udo Snack", "", "", "", "the sidewalk");
-            table.Rows.Add("the sidewalk", "the Betting Office", "the Udo Snack", "", "");
-            table.Rows.Add("the pokerroom", "the palace", "", "the Betting Office", "");
 
-            return table;
+
+            _table.Rows.Add("the Betting Office", "the palace", "", "the sidewalk", "the toilet", "chair", "menu");
+            _table.Rows.Add("the toilet", "", "the Betting Office", "", "", "toilet paper", "a soap");
+            _table.Rows.Add("the palace", "", "", "the pokerroom", "", "paintings of Mai Pei", "sensei hair care set");
+            _table.Rows.Add("the Udo Snack", "", "", "", "the sidewalk", "burger", "napkins");
+            _table.Rows.Add("the sidewalk", "the Betting Office", "the Udo Snack", "", "", "bet slip", "brick");
+            _table.Rows.Add("the pokerroom", "the palace", "", "the Betting Office", "", "poker chips", "drink");
+
+            return _table;
         }
 
         public void Play()
@@ -160,49 +148,49 @@ namespace TextAdventure_SWD
             Console.WriteLine("");
             Console.Write(string.Empty.PadLeft(Console.WindowWidth - Console.CursorLeft, '─'));
 
-            Description(player);
+            Description(Player);
 
-            string input = "";
-            while (input != "q")
+            string _input = "";
+            while (_input != "q")
             {
-                if (input == "n" || input == "e" || input == "s" || input == "w")
+                if (_input == "n" || _input == "e" || _input == "s" || _input == "w")
                 {
-                    int x = RandomRoom();
-                    switch (x)
+                    int _x = RandomRoom();
+                    switch (_x)
                     {
                         case 0:
-                            oliver.Move("n");
+                            Oliver.Move("n");
                             break;
                         case 1:
-                            oliver.Move("e");
+                            Oliver.Move("e");
                             break;
                         case 2:
-                            oliver.Move("s");
+                            Oliver.Move("s");
                             break;
                         case 3:
-                            oliver.Move("w");
+                            Oliver.Move("w");
                             break;
                     }
                 }
 
-                input = Console.ReadLine();
+                _input = Console.ReadLine();
 
                 try
                 {
-                    if (input != "q")
+                    if (_input != "q")
                     {
-                        switch (input)
+                        switch (_input)
                         {
                             case "q":
                             case "quit":
                                 break;
                             case "l":
                             case "look":
-                                Description(player);
+                                Description(Player);
                                 break;
                             case "i":
                             case "inventory":
-                                player.Inventory();
+                                Player.Inventory();
                                 break;
                             case "c":
                             case "commands":
@@ -210,36 +198,36 @@ namespace TextAdventure_SWD
                                 break;
                             case "d":
                             case "drop":
-                                Drop(player);
+                                Drop(Player);
                                 break;
                             case "t":
                             case "take":
-                                Take(player);
+                                Take(Player);
                                 break;
                             case "n":
                             case "north":
-                                player.Move(input);
-                                Description(player);
+                                Player.Move(_input);
+                                Description(Player);
                                 break;
                             case "e":
                             case "east":
-                                player.Move(input);
-                                Description(player);
+                                Player.Move(_input);
+                                Description(Player);
                                 break;
                             case "s":
                             case "south":
-                                player.Move(input);
-                                Description(player);
+                                Player.Move(_input);
+                                Description(Player);
                                 break;
                             case "w":
                             case "west":
-                                player.Move(input);
-                                Description(player);
+                                Player.Move(_input);
+                                Description(Player);
                                 break;
                             case "a":
                             case "attack":
-                                player.Attack();
-                                Description(player);
+                                Player.Attack();
+                                Description(Player);
                                 break;
                             default:
                                 Console.WriteLine("Invalid Command!");
@@ -258,42 +246,51 @@ namespace TextAdventure_SWD
 
         void Description(Player p)
         {
-            Enemy _enemy = p.position.GetEnemy();
-            Console.WriteLine("Your current Location is " + p.position.name + ".");
+            Enemy _enemy = p.Position.GetEnemy();
+            Console.WriteLine("Your current Location is " + p.Position.Name + ".");
             if (_enemy != null)
             {
-                Console.WriteLine("In " + p.position.name + " you can see " + _enemy.name + " with the Health of " + _enemy.health + ". With a/attack you can try to beat him up! Maybe you get some informations.");
+                Console.WriteLine("In " + p.Position.Name + " you can see " + _enemy.Name + " with the Health of " + _enemy.Health + ". With a/attack you can try to beat him up! Maybe you get some informations.");
+                Look(p);
             }
-
-            p.position.Look();
-            Console.WriteLine("You have " + p.health + " health points.");
+            p.Position.Look();
+            Console.WriteLine("You have " + p.Health + " health points.");
             Console.Write(string.Empty.PadLeft(Console.WindowWidth - Console.CursorLeft, '─'));
 
         }
 
-        void Take(Player player)
+        void Take(Player p)
         {
             Console.WriteLine("Which Item would you like to take?");
             Console.Write(string.Empty.PadLeft(Console.WindowWidth - Console.CursorLeft, '─'));
-            string item = Console.ReadLine();
-            Item takeItem = player.position.Take(item);
-            player.Insert(takeItem);
+            string _item = Console.ReadLine();
+            Item _takeItem = p.Position.Take(_item);
+            p.Insert(_takeItem);
         }
 
-        void Drop(Player player)
+        void Drop(Player p)
         {
             Console.WriteLine("Which Item would you like to drop?");
-            player.Inventory();
-            string item = Console.ReadLine();
+            p.Inventory();
+            string _item = Console.ReadLine();
 
-            Item dropItem = player.Delete(item);
-            player.position.Drop(dropItem);
+            Item _dropItem = p.Delete(_item);
+            p.Position.Drop(_dropItem);
         }
 
         void Commands()
         {
             Console.WriteLine("Choose between the following commands: commands(c), look(l), inventory(i), take(t) item, drop(d) item, quit(q).");
             Console.Write(string.Empty.PadLeft(Console.WindowWidth - Console.CursorLeft, '─'));
+        }
+
+        void Look(Player p)
+        {
+            Console.WriteLine("You see " + p.Position.GetEnemy().Name + ". His Items are: ");
+            for (int i = 0; i < p.Position.GetEnemy().CharacterItems.Count; i++)
+            {
+                Console.WriteLine("- " + p.Position.GetEnemy().CharacterItems[i].Name);
+            }
         }
     }
 }

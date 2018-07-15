@@ -9,11 +9,11 @@ namespace TextAdventure_SWD
         public List<Item> RoomItems = new List<Item>();
         public List<Characters> RoomPlayers = new List<Characters>();
 
-        public string name;
-        public Room north;
-        public Room east;
-        public Room south;
-        public Room west;
+        public string Name;
+        public Room North;
+        public Room East;
+        public Room South;
+        public Room West;
 
         public void Exit(Characters player)
         {
@@ -31,7 +31,10 @@ namespace TextAdventure_SWD
             {
                 if (RoomPlayers[i].GetType() == typeof(Enemy))
                 {
-                    return (Enemy)RoomPlayers[i];
+                    if (RoomPlayers[i].Health > 0)
+                    {
+                        return (Enemy)RoomPlayers[i];
+                    }
                 }
             }
             return null;
@@ -39,18 +42,18 @@ namespace TextAdventure_SWD
 
         public Item Take(string item)
         {
-            Item take = null;
+            Item _take = null;
             for (int i = 0; i < RoomItems.Count; i++)
             {
-                if (RoomItems[i].name == item)
+                if (RoomItems[i].Name == item)
                 {
-                    take = RoomItems[i];
+                    _take = RoomItems[i];
                     RoomItems.Remove(RoomItems[i]);
                     Console.WriteLine("You took " + item + ".");
                     Console.Write(string.Empty.PadLeft(Console.WindowWidth - Console.CursorLeft, '─'));
                 }
             }
-            return take;
+            return _take;
         }
 
         public void Drop(Item item)
@@ -65,7 +68,7 @@ namespace TextAdventure_SWD
             Console.WriteLine("You can see:");
             for (int i = 0; i < RoomItems.Count; i++)
             {
-                Console.WriteLine("- " + RoomItems[i].name);
+                Console.WriteLine("- " + RoomItems[i].Name);
             }
         }
     }

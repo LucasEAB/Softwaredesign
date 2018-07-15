@@ -6,23 +6,23 @@ namespace TextAdventure_SWD
 {
     public class Characters
     {
-        public string name;
-        public int health = 100;
+        public string Name;
+        public int Health = 100;
         public List<Item> CharacterItems = new List<Item>();
-        public Room position;
+        public Room Position;
 
         public Characters(string _name, Room _position)
         {
-            position = _position;
-            name = _name;
-            position.Entry(this);
+            Position = _position;
+            Name = _name;
+            Position.Entry(this);
         }
         public void Inventory()
         {
             Console.WriteLine("You have the following items in your shoulder bag:");
             for (int i = 0; i < CharacterItems.Count; i++)
             {
-                Console.WriteLine("- " + CharacterItems[i].name);
+                Console.WriteLine("- " + CharacterItems[i].Name);
             }
             Console.Write(string.Empty.PadLeft(Console.WindowWidth - Console.CursorLeft, '─'));
         }
@@ -32,57 +32,57 @@ namespace TextAdventure_SWD
         }
         public Item Delete(string item)
         {
-            Item drop = null;
+            Item _drop = null;
             for (int i = 0; i < CharacterItems.Count; i++)
             {
-                if (CharacterItems[i].name == item)
+                if (CharacterItems[i].Name == item)
                 {
-                    drop = CharacterItems[i];
+                    _drop = CharacterItems[i];
                     CharacterItems.Remove(CharacterItems[i]);
                 }
             }
-            return drop;
+            return _drop;
         }
 
         public void Move(string input)
         {
-            Room newRoom;
-            Room oldRoom = position;
+            Room _newRoom;
+            Room _oldRoom = Position;
 
             switch (input)
             {
                 case "n":
-                    newRoom = position.north;
+                    _newRoom = Position.North;
                     break;
                 case "e":
-                    newRoom = position.east;
+                    _newRoom = Position.East;
                     break;
                 case "s":
-                    newRoom = position.south;
+                    _newRoom = Position.South;
                     break;
                 case "w":
-                    newRoom = position.west;
+                    _newRoom = Position.West;
                     break;
                 default:
                     Console.WriteLine("Invalid Command!");
-                    newRoom = position;
+                    _newRoom = Position;
                     break;
             }
 
-            if (newRoom == null)
+            if (_newRoom == null)
             {
-                Console.WriteLine(this.name + " did not move!");
+                Console.WriteLine(this.Name + " did not move!");
                 Console.Write(string.Empty.PadLeft(Console.WindowWidth - Console.CursorLeft, '─'));
             }
             else
             {
-                if (newRoom != position)
+                if (_newRoom != Position)
                 {
-                    position = newRoom;
-                    oldRoom.Exit(this);
-                    Console.WriteLine(this.name + " walked from " + oldRoom.name + " to " + newRoom.name);
+                    Position = _newRoom;
+                    _newRoom.Exit(this);
+                    Console.WriteLine(this.Name + " walked from " + _oldRoom.Name + " to " + _newRoom.Name);
                     Console.Write(string.Empty.PadLeft(Console.WindowWidth - Console.CursorLeft, '─'));
-                    newRoom.Entry(this);
+                    _newRoom.Entry(this);
                 }
             }
         }

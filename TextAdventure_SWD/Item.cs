@@ -6,6 +6,6 @@ namespace TextAdventure_SWD
 {
     public class Item
     {
-        public string name;
+        public string Name;
     }
 }
